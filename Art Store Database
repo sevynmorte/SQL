@@ -1,0 +1,48 @@
+--Create a database table for the store
+
+
+CREATE TABLE items (id INTEGER PRIMARY KEY, name TEXT, price INTEGER);
+
+INSERT INTO items VALUES (1, 'acrylic paint', 4);
+
+INSERT INTO items VALUES (2, 'paint brush', 7);
+
+INSERT INTO items VALUES (3, 'eraser', 2);
+
+INSERT INTO items VALUES (4, 'ruler', 8);
+
+INSERT INTO items VALUES (5, 'toolbox', 13);
+
+INSERT INTO items VALUES (6, 'newsprint', 10);
+
+INSERT INTO items VALUES (7, 'guache', 5);
+
+INSERT INTO items VALUES (8, 'oil pastel', 7);
+
+INSERT INTO items VALUES (9, 'oil paint', 6);
+
+INSERT INTO items VALUES (10, 'charcoal', 2);
+
+INSERT INTO items VALUES (11, 'pencil', 1);
+
+INSERT INTO items VALUES (12, 'ink wash', 6);
+
+INSERT INTO items VALUES (13, 'binder', 4);
+
+INSERT INTO items VALUES (14, 'blender', 1);
+
+INSERT INTO items VALUES (15, 'chalk', 2);
+
+
+--what is the total price of all the items that are less than or equal to 7?
+SELECT SUM(price)
+FROM items
+WHERE price>=7;
+
+
+--what is the total price of everything sold at the store?
+SELECT MAX(price) FROM items;
+
+
+-- what is the order of price in descending order of the items less than 10?
+SELECT * FROM items WHERE price < 10 ORDER by price DESC
